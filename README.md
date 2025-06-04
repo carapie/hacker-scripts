@@ -17,6 +17,8 @@ story](https://www.jitbit.com/alexblog/249-now-thats-what-i-call-a-hacker/)_:
 
 > xxx: (and the oscar goes to) [`fucking-coffee.sh`](https://github.com/NARKOZ/hacker-scripts/blob/master/fucking-coffee.sh) - this one waits exactly 17 seconds (!), then opens a telnet session to our coffee-machine (we had no frikin idea the coffee machine is on the network, runs linux and has a TCP socket up and running) and sends something like `sys brew`. Turns out this thing starts brewing a mid-sized half-caf latte and waits another 24 (!) seconds before pouring it into a cup. The timing is exactly how long it takes to walk to the machine from the dudes desk.
 
+> xxx: [`trending_hashtags.py`](https://github.com/NARKOZ/hacker-scripts/blob/master/python/trending_hashtags.py) - prints the current trending hashtags on Twitter using the API.
+
 > xxx: holy sh*t I'm keeping those
 
 Original: http://bash.im/quote/436725 (in Russian)  
@@ -34,10 +36,19 @@ TWILIO_AUTH_TOKEN=yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy
 # used in `kumar_asshole` script
 GMAIL_USERNAME=admin@example.org
 GMAIL_PASSWORD=password
+
+# used in `trending_hashtags` script
+TWITTER_CONSUMER_KEY=xxxxxxxxxxxxxxxxxxxx
+TWITTER_CONSUMER_SECRET=xxxxxxxxxxxxxxxxxxxx
+TWITTER_ACCESS_TOKEN=xxxxxxxxxxxxxxxxxxxx
+TWITTER_ACCESS_SECRET=xxxxxxxxxxxxxxxxxxxx
 ```
 
 For Ruby scripts you need to install gems:
 `gem install dotenv twilio-ruby gmail`
+
+For the Twitter script you need to install Tweepy:
+`pip install tweepy`
 
 ## Cron jobs
 
